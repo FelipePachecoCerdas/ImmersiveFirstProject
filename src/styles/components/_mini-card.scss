@@ -1,0 +1,48 @@
+@use "../abstracts/breakpoints" as media;
+
+.mini-card {
+  width: 100%;
+  background-color: #fff5eb;
+  color: #515e63;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.2),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+
+  @include media.query(">=lg") {
+    width: 30%;
+  }
+
+  &:hover {
+    transform: scale(1.075, 1.075);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+      -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 1rem;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    padding: 1rem;
+    border-radius: 2rem;
+  }
+
+  &__list {
+    list-style-type: "🌿 ";
+  }
+}

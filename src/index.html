@@ -5,17 +5,112 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="assets/images/costa-rica2.jpeg">
+    <title>Costa Rica</title>
   </head>
 
   <body>
-    <h1 class="heading">Webpack Template</h1>
-    <h2>Image from img tag XX</h2>
-    <img class="image" src="assets/images/polite-cat.jpg" alt="A very polite cat" />
 
-    <hr />
-    <h2>Image from background image</h2>
-    <div class="image image--background" aria-label="A very polite cat" role="img"></div>
+
+    <div class="image image--background" aria-label="A very polite cat" role="img">
+
+      <header class="header">
+
+        <span class="header__title"> Costa Rica </span>
+
+        <nav class="header__menu">
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a href="#whatIsIt" class="header__menu-button">
+                What is it
+              </a>
+            </li>
+
+            <li class="header__list-item">
+              <a href="#algo" class="header__menu-button">
+                Who are we
+              </a>
+            </li>
+
+            <li class="header__list-item">
+              <a href="#algo" class="header__menu-button">
+                Where to go
+              </a>
+            </li>
+
+            <li class="header__list-item">
+              <a href="#algo" class="header__menu-button">
+                About
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+
+      </header>
+
+      <main class="main-content">
+
+
+        <article class="card card--background1" id="whatIsIt">
+          <h1 class="card__title"> What is it? </h1>
+          <div class="mini-card-container">
+
+            <section class="mini-card">
+              <h3 class="mini-card__title"> The country </h3>
+
+              <div class="mini-card__container">
+                <p class="mini-card__text">
+                  Costa Rica is a small country located in Central America. Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                  the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                  book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                  containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                  PageMaker including versions of Lorem Ipsum.
+                </p>
+              </div>
+
+            </section>
+
+            <section class="mini-card">
+              <h3 class="mini-card__title"> The people </h3>
+              <img class="mini-card__photo" src="assets/images/costa-rica2.jpeg" />
+            </section>
+
+            <section class="mini-card">
+              <h3 class="mini-card__title"> The </h3>
+              <ul class="mini-card__list">
+                <li> Rowling and Harry Potter share a birthday. </li>
+                <li> Harry was named for his great-grandfather. </li>
+                <li> He was played by Daniel Radcliffle. </li>
+              </ul>
+            </section>
+
+          </div>
+        </article>
+
+
+
+        <article class="card card--background3" id="whereToGo">
+          <h1 class="card__title"> Where to go? </h1>
+
+          <div class="card__image-place">
+
+            <div class="card__image-content">
+              <h1>HOLA MUNDo</h1>
+            </div>
+          </div>
+
+
+
+        </article>
+
+
+      </main>
+
+    </div>
+
   </body>
 
 </html>

@@ -1,0 +1,18 @@
+$nature-gradient: linear-gradient(to left, #fcc314, #3ca55c, #1c7293);
+
+.history {
+  margin: 1rem;
+  background-color: #8fd9a855;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  &__title {
+    font-size: 3rem;
+    background-image: $nature-gradient;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: contain;
+    width: fit-content;
+  }
+}

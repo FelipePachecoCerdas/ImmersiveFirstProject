@@ -1,11 +1,10 @@
 .image {
-  width: rem(200px);
-  height: auto;
-
   &--background {
-    height: rem(200px);
-    background-image: url("../../assets/images/polite-cat.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../../assets/images/cosmic-timetraveler-LgrGHYZzBSk-unsplash.jpg");
     background-position: center;
     background-size: cover;
+    position: absolute;
   }
 }

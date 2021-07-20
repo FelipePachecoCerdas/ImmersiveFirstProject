@@ -1,0 +1,12 @@
+@use "../abstracts/breakpoints" as media;
+
+.mini-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+
+  @include media.query(">=lg") {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

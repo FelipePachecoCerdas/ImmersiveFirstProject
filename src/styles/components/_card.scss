@@ -1,0 +1,47 @@
+.card {
+  border-radius: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+
+  font-family: "Open Sans", sans-serif;
+
+  &__title {
+    font-size: 3rem;
+    color: $white;
+    text-align: center;
+  }
+
+  &__image-place {
+    background-image: url("../../assets/images/cosmic-timetraveler-LgrGHYZzBSk-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 10vh;
+    width: 10vw;
+
+    &:hover + .card__image-content {
+      filter: opacity(50%);
+    }
+  }
+
+  &__image-content {
+    display: none;
+    border: 1px solid #000;
+    height: 30px;
+    width: 290px;
+    margin-left: 10px;
+  }
+
+  &--background1 {
+    background: -webkit-linear-gradient(#67b26fdd, #4ca2cddd);
+  }
+
+  &--background2 {
+    background: -webkit-linear-gradient(#de6161, #ffc947);
+  }
+
+  &--background3 {
+    background: -webkit-linear-gradient(#be93c5, #7bc6cc);
+  }
+}
