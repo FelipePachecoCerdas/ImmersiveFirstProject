@@ -1,0 +1,98 @@
+@use "functions";
+@use "variables";
+
+$media-expressions: (
+  "screen": "screen",
+  "print": "print",
+  "handheld": "handheld",
+  "landscape": "(orientation: landscape)",
+  "portrait": "(orientation: portrait)",
+  "ie": "all and (-ms-high-contrast:none)",
+  "retina2x":
+    "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
+  "retina3x":
+    "(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi), (min-resolution: 3dppx)",
+);
+
+$unit-intervals: (
+  "px": 1,
+  "em": 0.01,
+  "rem": 0.1,
+  "": 0,
+);
+
+@function get-expression-operator($expression) {
+  @each $operator in (">=", ">", "<=", "<", "≥", "≤") {
+    @if str-index($expression, $operator) {
+      @return $operator;
+    }
+  }
+  $_: functions.im-log("No operator found in `#{$expression}`.");
+}
+
+@function get-expression-dimension($expression, $operator) {
+  $operator-index: str-index($expression, $operator);
+  $parsed-dimension: str-slice($expression, 0, $operator-index - 1);
+  $dimension: "width";
+
+  @if str-length($parsed-dimension) > 0 {
+    $dimension: $parsed-dimension;
+  }
+
+  @return $dimension;
+}
+
+@function get-expression-prefix($operator) {
+  @return if(index(("<", "<=", "≤"), $operator), "max", "min");
+}
+
+@function get-expression-value($expression, $operator) {
+  $operator-index: str-index($expression, $operator);
+  $value: str-slice($expression, $operator-index + str-length($operator));
+
+  @if map-has-key(variables.$breakpoints, $value) {
+    $value: map-get(variables.$breakpoints, $value);
+  } @else {
+    $value: functions.to-number($value);
+  }
+
+  $interval: map-get($unit-intervals, unit($value));
+
+  @if not $interval {
+    $_: functions.im-log("Unknown unit `#{unit($value)}`.");
+  }
+
+  @if $operator == ">" {
+    $value: $value + $interval;
+  } @else if $operator == "<" {
+    $value: $value - $interval;
+  }
+
+  @return $value;
+}
+
+@function parse-expression($expression) {
+  @if map-has-key($media-expressions, $expression) {
+    @return map-get($media-expressions, $expression);
+  }
+
+  $operator: get-expression-operator($expression);
+  $dimension: get-expression-dimension($expression, $operator);
+  $prefix: get-expression-prefix($operator);
+  $value: get-expression-value($expression, $operator);
+
+  @return "(#{$prefix}-#{$dimension}: #{$value})";
+}
+
+@mixin query($conditions...) {
+  @if (length($conditions) == 0) {
+    @content;
+  } @else {
+    @media #{unquote(parse-expression(nth($conditions, 1)))} {
+      $sliced-conditions: functions.slice($conditions, 2);
+      @include query($sliced-conditions...) {
+        @content;
+      }
+    }
+  }
+}

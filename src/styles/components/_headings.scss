@@ -1,0 +1,31 @@
+@use "../abstracts/breakpoints" as media;
+
+.heading {
+  font-size: rem(16px);
+  color: #333;
+
+  @include media.query(">=sm") {
+    font-size: rem(52px);
+    color: #e53935;
+  }
+
+  @include media.query(">1000px", "<1005px") {
+    font-size: rem(100px);
+    color: #8e24aa;
+  }
+
+  @include media.query(">=md") {
+    font-size: rem(72px);
+    color: #1e88e5;
+  }
+
+  @include media.query(">=lg") {
+    font-size: rem(82px);
+    color: #43a047;
+  }
+
+  @include media.query(">=xl") {
+    font-size: rem(92px);
+    color: #fb8c00;
+  }
+}

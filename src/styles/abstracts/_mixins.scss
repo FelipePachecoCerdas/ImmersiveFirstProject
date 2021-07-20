@@ -1,0 +1,6 @@
+@use "functions";
+
+@mixin log($message) {
+  @if functions.im-log($message) {
+  }
+}

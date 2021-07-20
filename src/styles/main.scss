@@ -1,0 +1,10 @@
+// ABSTRACT
+@import "./abstracts/variables.scss";
+@import "./abstracts/functions";
+
+// BASE
+@import "./base/reset";
+
+// COMPONENTS
+@import "./components/headings";
+@import "./components/image";
