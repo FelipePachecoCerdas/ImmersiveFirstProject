@@ -1,0 +1,46 @@
+@use "../abstracts/breakpoints" as media;
+
+.input-field {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+
+  &__label {
+    color: $white;
+    width: 30vw;
+    text-align: center;
+
+    @include media.query(">=md") {
+      width: 10vw;
+    }
+  }
+
+  &__input {
+    border-radius: 1rem;
+    border: none;
+    background-color: $white;
+    color: $black;
+    padding: 0.5rem;
+    width: 50vw;
+
+    @include media.query(">=md") {
+      width: 30vw;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 4px rgba(221, 30, 103, 0.712),
+        rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+        rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(216, 109, 21, 0.733),
+        rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+        rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+  }
+}

@@ -1,12 +1,13 @@
 @use "../abstracts/breakpoints" as media;
 
-.mini-card-container {
+.input-container {
   display: flex;
   flex-direction: column;
-  align-items: space-around;
 
   @include media.query(">=md") {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
   }
 }

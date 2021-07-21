@@ -1,0 +1,130 @@
+@use "../abstracts/breakpoints" as media;
+
+.image-card {
+  width: 30vw;
+  height: 30vw;
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 0;
+
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.2),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+
+  border-radius: 1rem;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.075, 1.075);
+    box-shadow: 5px 5px 30px 15px rgba(92, 78, 78, 0.25),
+      -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+
+    .image-card__image {
+      opacity: 0.35;
+    }
+    .image-card__content {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(216, 109, 21, 0.733),
+      rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  }
+
+  @include media.query(">=800px") {
+    width: 20rem;
+    height: 20rem;
+    margin-left: 2rem;
+  }
+
+  &__image {
+    background-image: url("../../assets/images/cosmic-timetraveler-LgrGHYZzBSk-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    display: block;
+
+    opacity: 0.9;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+
+    &--place1 {
+      background-image: url("../../assets/images/costa-rica-place-1.jpeg");
+    }
+
+    &--place2 {
+      background-image: url("../../assets/images/costa-rica-place-2.jpeg");
+    }
+
+    &--place3 {
+      background-image: url("../../assets/images/costa-rica-place-3.jpeg");
+    }
+
+    &--place4 {
+      background-image: url("../../assets/images/costa-rica-place-4.jpeg");
+    }
+
+    &--place5 {
+      background-image: url("../../assets/images/costa-rica-place-5.jpeg");
+    }
+
+    &--place6 {
+      background-image: url("../../assets/images/costa-rica-place-6.jpeg");
+    }
+
+    &--place7 {
+      background-image: url("../../assets/images/costa-rica-place-7.jpeg");
+    }
+
+    &--place8 {
+      background-image: url("../../assets/images/costa-rica-place-8.jpeg");
+    }
+
+    &--place9 {
+      background-image: url("../../assets/images/costa-rica-place-9.jpeg");
+    }
+
+    &--place10 {
+      background-image: url("../../assets/images/costa-rica-place-10.jpeg");
+    }
+
+    &--place11 {
+      background-image: url("../../assets/images/costa-rica-place-11.jpeg");
+    }
+
+    &--place12 {
+      background-image: url("../../assets/images/costa-rica-place-12.jpeg");
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    position: absolute;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    opacity: 0;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 1.2rem;
+    padding: 1rem;
+    @include media.query(">=800px") {
+      font-size: 2rem;
+    }
+  }
+}

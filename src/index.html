@@ -11,105 +11,304 @@
 
   <body>
 
-
-    <div class="image image--background" aria-label="A very polite cat" role="img">
-
-      <header class="header">
-
+    <header class="header--size">
+      <div class="image image--background" aria-label="Costa Rican volcano" role="img">
+      </div>
+      <div class="header">
         <span class="header__title"> Costa Rica </span>
 
         <nav class="header__menu">
           <ul class="header__list">
             <li class="header__list-item">
-              <a href="#whatIsIt" class="header__menu-button">
-                What is it
+              <a href="#whoAreWe" class="header__menu-button">
+                Who are we?
               </a>
             </li>
 
             <li class="header__list-item">
-              <a href="#algo" class="header__menu-button">
-                Who are we
+              <a href="#whatToDo" class="header__menu-button">
+                What to do?
               </a>
             </li>
 
             <li class="header__list-item">
-              <a href="#algo" class="header__menu-button">
-                Where to go
+              <a href="#whereToGo" class="header__menu-button">
+                Where to go?
               </a>
             </li>
 
             <li class="header__list-item">
-              <a href="#algo" class="header__menu-button">
-                About
+              <a href="#more" class="header__menu-button">
+                More
               </a>
             </li>
 
           </ul>
         </nav>
 
-      </header>
-
-      <main class="main-content">
-
-
-        <article class="card card--background1" id="whatIsIt">
-          <h1 class="card__title"> What is it? </h1>
-          <div class="mini-card-container">
-
-            <section class="mini-card">
-              <h3 class="mini-card__title"> The country </h3>
-
-              <div class="mini-card__container">
-                <p class="mini-card__text">
-                  Costa Rica is a small country located in Central America. Lorem Ipsum is simply dummy text of the
-                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                  the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                  book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                  containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-                  PageMaker including versions of Lorem Ipsum.
-                </p>
-              </div>
-
-            </section>
-
-            <section class="mini-card">
-              <h3 class="mini-card__title"> The people </h3>
-              <img class="mini-card__photo" src="assets/images/costa-rica2.jpeg" />
-            </section>
-
-            <section class="mini-card">
-              <h3 class="mini-card__title"> The </h3>
-              <ul class="mini-card__list">
-                <li> Rowling and Harry Potter share a birthday. </li>
-                <li> Harry was named for his great-grandfather. </li>
-                <li> He was played by Daniel Radcliffle. </li>
-              </ul>
-            </section>
-
-          </div>
-        </article>
+      </div>
+    </header>
 
 
+    <main class="main-content">
 
-        <article class="card card--background3" id="whereToGo">
-          <h1 class="card__title"> Where to go? </h1>
 
-          <div class="card__image-place">
+      <article class="card card--background1" id="whoAreWe">
+        <h1 class="card__title"> <span class="card__title--overline">W</span>ho are we? </h1>
+        <div class="mini-card-container">
 
-            <div class="card__image-content">
-              <h1>HOLA MUNDo</h1>
+          <section class="mini-card">
+            <h2 class="mini-card__title"> Our country </h2>
+
+            <div class="mini-card__container">
+
+              <img class="mini-card__photo" src="assets/images/costa-rica2.jpeg" alt="Costa Rican flag and shield" />
+              <p class="mini-card__text">
+                Costa Rica is a small country located in Central America. It has a
+                large number of tourist destinations full of nature and life, which encourage you to enjoy
+                unforgettable
+                experiences with their people.
+              </p>
+
             </div>
+
+          </section>
+
+          <section class="mini-card">
+            <h2 class="mini-card__title"> Our people </h2>
+
+            <img class="mini-card__photo" src="assets/images/costa-rica3.jpeg"
+              alt="Costa Ricans wearing our typical costumes" />
+            <p class="mini-card__text">
+              Costa Rica is characterized by the quality of its citizens, always cheerful and willing to help. In
+              addition to its commitment to preserve nature and ecosystems that characterize the country so much.
+            </p>
+
+          </section>
+
+          <section class="mini-card">
+            <h2 class="mini-card__title"> Our culture </h2>
+
+            <img class="mini-card__photo" src="assets/images/costa-rica4.jpeg" alt="People in a bullfight" />
+            <p class="mini-card__text">
+              We love to celebrate our customs and traditions in the most joyful and fun way, sharing moments and
+              creating unique experiences for our people.
+            </p>
+
+          </section>
+
+        </div>
+      </article>
+
+
+
+      <article class="card card--background2" id="whatToDo">
+        <h1 class="card__title"> <span class="card__title--overline">W</span>hat to do? </h1>
+
+        <section class="tabs">
+
+          <ul role="tablist" id="js-tabs" class="tabs__list">
+            <li role="presentation" class="tabs__list-item">
+              <a href="#section1" role="tab" id="tab1" aria-selected="true"
+                class="tabs__tab tabs__tab--first">Controls</a>
+            </li>
+            <li role="presentation" class="tabs__list-item">
+              <a href="#section2" role="tab" id="tab2" tabindex="-1" class="tabs__tab">Beaches</a>
+            </li>
+            <li role="presentation" class="tabs__list-item">
+              <a href="#section3" role="tab" id="tab3" tabindex="-1" class="tabs__tab tabs__tab--last">Natural Parks</a>
+            </li>
+          </ul>
+          <section id="tabSection1" role="tabpanel" aria-labelledby="tab1" class="tabs__tabcontent">
+            <h2>Controls</h2>
+            <p>
+              If focus is on a <a href="#">tab button</a>
+            </p>
+            <ul>
+              <li><strong>Left / Up Arrow:</strong> Show the previous tab</li>
+              <li><strong>Right / Down Arrow:</strong> Show the next tab</li>
+              <li><strong>Home:</strong> Show the first tab</li>
+              <li><strong>End:</strong> Show the last tab</li>
+            </ul>
+          </section>
+          <section id="tabSection2" role="tabpanel" aria-labelledby="tab2" hidden class="tabs__tabcontent">
+            <h2>More Controls</h2>
+            <p>
+              If focus is on an element in a tab panel:
+            </p>
+            <ul>
+              <li><strong>Control + Up Arrow/Left Arrow:</strong> Set focus on the tab button for the currently
+                displayed tab.</li>
+              <li><strong>Control + Page Up:</strong> Show the previous tab and set focus on its corresponding tab
+                button. Shows the last tab in the panel if current tab is the first one.</li>
+              <li><strong>Control + Page Down:</strong> Show the next tab and set focus on its corresponding tab button.
+                Shows the first tab in the panel if current tab is the last one.</li>
+            </ul>
+          </section>
+          <section id="tabSection3" role="tabpanel" aria-labelledby="tab3" hidden class="tabs__tabcontent">
+            <h2>Checklist</h2>
+            <p id="linkOnTab3">
+              <a href="#linkOnTab3">Random link on the last tab</a>
+            </p>
+            <ol>
+              <li>The element that serves as the container for the set of tabs has role <strong>tablist</strong>.</li>
+              <li>Each element that serves as a tab has role <strong>tab</strong>. and is contained within the element
+                with role <strong>tablist</strong>..</li>
+              <li>Each element that contains the content panel for a tab has role <strong>tabpanel</strong>..</li>
+              <li>If the tab list has a visible label, the element with role tablist has
+                <strong>aria-labelledby</strong>. set to a value that refers to the labelling element. Otherwise, the
+                tablist element has a label provided by <strong>aria-label</strong>.
+              </li>
+              <li>Each element with role tab has the property <strong>aria-controls</strong>. referring to its
+                associated tabpanel element.</li>
+              <li>The active tab element has the state <strong>aria-selected</strong>. set to true and all other tab
+                elements have it set to false.</li>
+              <li>Each element with role tabpanel has the property <strong>aria-labelledby</strong>. referring to its
+                associated tab element.</li>
+            </ol>
+          </section>
+
+        </section>
+
+        </div>
+      </article>
+
+
+      <article class="card card--background3" id="whereToGo">
+
+        <h1 class="card__title"> <span class="card__title--overline">W</span>here to go? </h1>
+
+        <div class="image-card-container">
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place1"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Puerto Viejo</h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place2"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Cahuita </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place3"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Tortuguero </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place4"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Corcovado </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place5"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Arenal Volcano </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place6"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Manuel Antonio </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place7"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Monteverde </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place8"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Poas Volcano </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place9"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Santa Teresa </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place10"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Museo de Oro </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place11"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Museo del Jade </h2>
+            </div>
+          </a>
+
+          <a class="image-card" tabindex="0">
+            <div class="image-card__image image-card__image--place12"></div>
+            <div class="image-card__content">
+              <h2 class="image-card__title"> Wilson Botanical Garden </h2>
+            </div>
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="card card--background4" id="more">
+
+        <h1 class="card__title"> <span class="card__title--overline">M</span>ore </h1>
+        <p class="card__text"> Want to know more about our beautiful contry? </p>
+        <p class="card__text"> Contact us! </p>
+
+        <div class="input-container">
+          <div class="input-field">
+            <label for="fullName" class="input-field__label">Full name</label>
+            <input type="text" class="input-field__input" id="fullName">
           </div>
 
+          <div class="input-field">
+            <label for="email" class="input-field__label">Email</label>
+            <input type="email" class="input-field__input" id="email">
+          </div>
 
+          <div class="input-field">
+            <label for="phoneNumber" class="input-field__label">Phone number</label>
+            <input type="number" class="input-field__input" id="phoneNumber">
+          </div>
 
-        </article>
+          <div class="input-field">
+            <label for="comments" class="input-field__label">Comments</label>
+            <textarea type="number" class="input-field__input input-field__input--textarea" id="comments"> </textarea>
+          </div>
+        </div>
 
+        <div class="card__button-container">
+          <button class="card__button" type="submit">
+            Submit
+          </button>
+        </div>
 
-      </main>
+      </article>
 
-    </div>
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+
 
   </body>
 

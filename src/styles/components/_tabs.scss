@@ -1,0 +1,54 @@
+.tabs {
+  margin-top: 1rem;
+  color: $black;
+
+  &__list-item,
+  &__tab {
+    display: inline-block;
+  }
+
+  &__tab {
+    font-size: 1.5rem;
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    background-color: #7dc383dd;
+
+    &:hover {
+      box-shadow: 0 0 0 4px rgba(221, 30, 103, 0.712);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(21, 216, 174, 0.774);
+    }
+
+    &--first {
+      border-radius: 1rem 0 0 0;
+    }
+
+    &--last {
+      border-radius: 0 1rem 0 0;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list [aria-selected] {
+    text-decoration: underline;
+    background-color: $white;
+    color: #7dc383;
+  }
+
+  &__tabcontent {
+    border-radius: 1rem;
+    padding: 24px;
+    background-color: $white;
+  }
+}
