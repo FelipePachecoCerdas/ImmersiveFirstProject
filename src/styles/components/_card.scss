@@ -1,3 +1,5 @@
+@use "../abstracts/breakpoints" as media;
+
 .card {
   border-radius: 2rem;
   padding: 2rem;
@@ -63,6 +65,37 @@
     }
   }
 
+  &__video {
+    border-radius: 1rem;
+    text-align: center;
+    display: block;
+    width: 70vw;
+    margin: 1rem auto;
+
+    @include media.query(">=sm") {
+      width: 30rem;
+    }
+
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+    &:hover {
+      box-shadow: 0 0 0 4px rgba(221, 30, 103, 0.712),
+        rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+        rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(216, 109, 21, 0.733),
+        rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+        rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+  }
+
   &--background1 {
     background: -webkit-linear-gradient(#67b26fdd, #4ca2cddd);
   }
@@ -78,4 +111,10 @@
   &--background4 {
     background: -webkit-linear-gradient(#ffafbd, #ffc3a0);
   }
+}
+
+.controls button:hover,
+.controls button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(221, 30, 103, 0.712);
 }
