@@ -1,0 +1,35 @@
+.skip-to-main {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+.skip-to-main:focus,
+.skip-to-main:active {
+  color: $white;
+  background-color: $black;
+  width: 15rem;
+  height: 3.5rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  overflow: auto;
+  padding: 1rem;
+  padding-bottom: 1.25rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(21, 216, 174, 0.774);
+
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 999;
+}
