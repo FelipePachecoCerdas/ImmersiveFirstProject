@@ -49,6 +49,17 @@
     padding: 1rem;
     border-radius: 2rem;
     opacity: 0.9;
+
+    @include media.query(">=sm") {
+      width: 45vh;
+      height: auto;
+      align-self: center;
+    }
+
+    @include media.query(">=md") {
+      width: 100%;
+      height: 30vh;
+    }
   }
 
   &__list {

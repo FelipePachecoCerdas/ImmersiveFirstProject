@@ -1,9 +1,5 @@
 @use "../abstracts/breakpoints" as media;
 
-$nature-gradient: linear-gradient(to left, #fcc314, #3ca55c, #1c7293);
-$mouse-x: 5px;
-$mouse-y: 5px;
-
 .header {
   height: 100vh;
   display: flex;
@@ -25,6 +21,9 @@ $mouse-y: 5px;
   }
 
   &__title {
+    width: 25rem;
+
+    /*
     font-size: 4.5rem;
     background-image: $nature-gradient;
     color: transparent;
@@ -32,10 +31,10 @@ $mouse-y: 5px;
     background-clip: text;
     margin-top: 2rem;
     font-weight: 700;
-
+  */
     @include media.query(">=lg") {
-      margin-top: 0;
-      font-size: 3.5rem;
+      margin-top: 0.75rem;
+      margin-left: -2rem;
     }
   }
 

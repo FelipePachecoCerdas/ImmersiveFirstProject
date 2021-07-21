@@ -1,5 +1,44 @@
+@use "../abstracts/breakpoints" as media;
+
 .footer {
   background-color: $black;
   color: $white;
-  height: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 0.75rem 0.5rem 0.75rem;
+  text-align: center;
+
+  @include media.query(">=sm") {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+  }
+
+  &__link {
+    &--text {
+      color: #fff9b0;
+    }
+
+    &--icon {
+      height: 0rem;
+      color: none;
+      margin: 0;
+    }
+  }
+
+  &__text {
+    font-size: 0.75rem;
+  }
+
+  &__icon {
+    margin: 1rem 1rem 1rem 0;
+    width: 2rem;
+
+    @include media.query(">=sm") {
+      margin-top: 1rem;
+    }
+  }
 }

@@ -4,6 +4,9 @@
   margin-bottom: 2rem;
   max-width: 100%;
 
+  box-shadow: 3px 3px 15px 3px rgba(0, 0, 0, 0.2),
+    -3px -3px 15px 3px rgba(0, 0, 0, 0.15);
+
   &__title {
     font-size: 3rem;
     color: $white;
@@ -36,6 +39,7 @@
     padding: 0.5rem 2rem;
     border-radius: 1rem;
     font-size: 1.5rem;
+    font-weight: 700;
     box-shadow: none;
 
     &:hover {

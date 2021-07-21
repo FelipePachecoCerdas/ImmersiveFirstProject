@@ -15,7 +15,16 @@
       <div class="image image--background" aria-label="Costa Rican volcano" role="img">
       </div>
       <div class="header">
-        <span class="header__title"> Costa Rica </span>
+        <span class="header__title">
+
+          <svg viewBox="0 0 100 15">
+            <!-- Symbol-->
+            <symbol id="s-text"><text text-anchor="middle" x="50%" y="50%" dy=".35em">Costa Rica</text></symbol>
+            <use class="animated-text" xlink:href="#s-text"></use>
+            <use class="animated-text" xlink:href="#s-text"></use>
+            <use class="animated-text" xlink:href="#s-text"></use>
+          </svg>
+        </span>
 
         <nav class="header__menu">
           <ul class="header__list">
@@ -123,7 +132,7 @@
             </li>
 
             <li role="presentation" class="tabs__list-item">
-              <a href="#section3" role="tab" id="tab3" tabindex="-1" class="tabs__tab tabs__tab--last">Other
+              <a href="#section4" role="tab" id="tab4" tabindex="-1" class="tabs__tab tabs__tab--last">Other
                 activities</a>
             </li>
 
@@ -134,63 +143,86 @@
             <h2 class="tab-content__title"> Cities </h2>
 
             <div class="tab-content__container">
+
               <img class="tab-content__photo" src="assets/images/costa-rica5.jpeg"
                 alt="Basilica de los Angeles, Cartago" />
+
               <ul class="tab-content__list tab-content__list--icon1">
-                <li> Visit museums. </li>
+                <li> Visit our incredible museums full of our history and culture. </li>
                 <li> Eat at local restaurants. </li>
                 <li> Tour by famous locations. </li>
                 <li> Take a walk through parks, churches and other wonderful buildings. </li>
               </ul>
+
+              <img class="tab-content__photo tab-content__photo--hidden" src="assets/images/costa-rica6.jpeg"
+                alt="Aerial view of Puntarenas" />
+
             </div>
 
           </section>
 
           <section id="tabSection2" role="tabpanel" aria-labelledby="tab2" hidden class="tab-content">
+
+            <h2 class="tab-content__title"> Beaches </h2>
+
             <div class="tab-content__container">
 
-              <h2>More Controls</h2>
-              <p>
-                If focus is on an element in a tab panel:
-              </p>
-              <ul>
-                <li><strong>Control + Up Arrow/Left Arrow:</strong> Set focus on the tab button for the currently
-                  displayed tab.</li>
-                <li><strong>Control + Page Up:</strong> Show the previous tab and set focus on its corresponding tab
-                  button. Shows the last tab in the panel if current tab is the first one.</li>
-                <li><strong>Control + Page Down:</strong> Show the next tab and set focus on its corresponding tab
-                  button.
-                  Shows the first tab in the panel if current tab is the last one.</li>
+              <img class="tab-content__photo" src="assets/images/costa-rica7.jpeg" alt="Playa Manzanillo, Limón" />
+
+              <ul class="tab-content__list tab-content__list--icon2">
+                <li> Visit our beautiful and unique beaches on all of our coasts. </li>
+                <li> Rest in luxurious restaurants with a variety of products and recipes our people.. </li>
+                <li> Practice extreme sports and activities like surfing, kayaking, paragliding and many more. </li>
               </ul>
 
+              <img class="tab-content__photo tab-content__photo--hidden" src="assets/images/costa-rica8.jpeg"
+                alt="Playa Conchal, Guanacaste" />
+
             </div>
+
+
           </section>
 
           <section id="tabSection3" role="tabpanel" aria-labelledby="tab3" hidden class="tab-content">
+
+            <h2 class="tab-content__title"> Nature zones </h2>
+
             <div class="tab-content__container">
 
-              <h2>Checklist</h2>
-              <p id="linkOnTab3">
-                <a href="#linkOnTab3">Random link on the last tab</a>
-              </p>
-              <ol>
-                <li>The element that serves as the container for the set of tabs has role <strong>tablist</strong>.</li>
-                <li>Each element that serves as a tab has role <strong>tab</strong>. and is contained within the element
-                  with role <strong>tablist</strong>..</li>
-                <li>Each element that contains the content panel for a tab has role <strong>tabpanel</strong>..</li>
-                <li>If the tab list has a visible label, the element with role tablist has
-                  <strong>aria-labelledby</strong>. set to a value that refers to the labelling element. Otherwise, the
-                  tablist element has a label provided by <strong>aria-label</strong>.
-                </li>
-                <li>Each element with role tab has the property <strong>aria-controls</strong>. referring to its
-                  associated tabpanel element.</li>
-                <li>The active tab element has the state <strong>aria-selected</strong>. set to true and all other tab
-                  elements have it set to false.</li>
-                <li>Each element with role tabpanel has the property <strong>aria-labelledby</strong>. referring to its
-                  associated tab element.</li>
-              </ol>
+              <img class="tab-content__photo" src="assets/images/costa-rica9.jpeg"
+                alt="Marino Ballena National Park, Puntarenas" />
 
-            </div>
+              <ul class="tab-content__list tab-content__list--icon3">
+                <li> Visit our beautiful and unique beaches on all of our coasts. </li>
+                <li> Rest in luxurious restaurants with a variety of products and recipes our people.. </li>
+                <li> Practice extreme sports and activities like surfing, kayaking, paragliding and many more. </li>
+              </ul>
+
+              <img class="tab-content__photo tab-content__photo--hidden" src="assets/images/costa-rica10.jpeg"
+                alt="Arenal Volcano National Park, Alajuela" />
+
+
+          </section>
+
+          <section id="tabSection4" role="tabpanel" aria-labelledby="tab4" hidden class="tab-content">
+
+            <h2 class="tab-content__title"> Other activities </h2>
+
+            <div class="tab-content__container">
+
+              <img class="tab-content__photo" src="assets/images/costa-rica11.jpeg" alt="Costa Rican turno" />
+
+              <ul class="tab-content__list tab-content__list--icon4">
+                <li> Enjoy bullfights, the traditional "turnos" and other typical activities. </li>
+                <li> Watch and practice activities like the Chocolate Tour. </li>
+                <li> Rest in luxurious restaurants with a variety of products and recipes our people.. </li>
+                <li> Practice extreme sports and activities like surfing, kayaking, paragliding and many more. </li>
+              </ul>
+
+              <img class="tab-content__photo tab-content__photo--hidden" src="assets/images/costa-rica12.jpeg"
+                alt="Chocolate tour in Costa Rica" />
+
+
           </section>
 
         </div>
@@ -331,6 +363,19 @@
     </main>
 
     <footer class="footer">
+
+      <span class="footer__text"> Page designed by <a href="https://github.com/FelipePachecoCerdas"
+          class="footer__link--text"> Felipe Pacheco Cerdas</a> for the Brainstation Immersive Program </span>
+
+      <div class="footer__icon-container">
+        <a href="https://github.com/FelipePachecoCerdas/ImmersiveFirstProject" class="footer__link-icon">
+          <img src="./assets/images/github.svg" alt="GitHub Logo" class="footer__icon">
+        </a>
+
+        <a href="https://cr.linkedin.com/in/felipe-andr%C3%A9s-pacheco-cerdas-42126a211" class="footer__link--icon">
+          <img src="./assets/images/linkedin.svg" alt="LinkedIn Logo" class="footer__icon">
+        </a>
+      </div>
 
     </footer>
 

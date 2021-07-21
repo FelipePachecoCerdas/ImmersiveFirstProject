@@ -10,7 +10,7 @@
   }
 
   &__tab {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-align: center;
     color: $white;
     text-decoration: none;
@@ -20,7 +20,7 @@
     border-radius: 1rem;
     margin: 0 1rem 1rem 1rem;
     width: 15rem;
-    box-shadow: none;
+    box-shadow: 0px -20px 30px 0px rgba(0, 0, 0, 0.15);
 
     transition: box-shadow 0.5s ease-in-out;
     transition: color 0.5s ease-in-out;
@@ -41,7 +41,8 @@
     }
 
     &:hover {
-      box-shadow: 0 0 0 4px rgba(221, 30, 103, 0.712);
+      box-shadow: 0px -20px 30px 0px rgba(0, 0, 0, 0.15),
+        0 0 0 4px rgba(221, 30, 103, 0.712);
       z-index: 200;
       background-color: $white;
       border: none;
@@ -50,7 +51,8 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 4px rgba(21, 216, 174, 0.774);
+      box-shadow: 0px -20px 30px 0px rgba(0, 0, 0, 0.15),
+        0 0 0 4px rgba(21, 216, 174, 0.774);
       z-index: 100;
       border: none;
       background-color: $white;
@@ -76,6 +78,6 @@
   &__list [aria-selected] {
     text-decoration: underline;
     background-color: $white;
-    color: #7dc383;
+    color: #356638;
   }
 }
