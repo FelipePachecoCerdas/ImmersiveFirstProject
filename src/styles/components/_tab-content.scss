@@ -1,0 +1,63 @@
+@use "../abstracts/breakpoints" as media;
+
+.tab-content {
+  border-radius: 1rem;
+  padding: 24px;
+  background-color: $white;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include media.query(">=640px") {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  &__photo {
+    width: 100%;
+    background-position: bottom;
+    object-fit: cover;
+    padding: 1rem;
+    border-radius: 2rem;
+    opacity: 0.9;
+
+    @include media.query(">=640px") {
+      width: 50vh;
+    }
+  }
+
+  &__list {
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    @include media.query(">=640px") {
+      width: 50vh;
+    }
+  }
+
+  &__list--icon1 {
+    list-style-type: "🏛️ ";
+  }
+
+  &__list--icon2 {
+    list-style-type: "🏖️ ";
+  }
+
+  &__list--icon3 {
+    list-style-type: "🌿 ";
+  }
+
+  &__list--icon4 {
+    list-style-type: "🚌 ";
+  }
+}

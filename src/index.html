@@ -105,70 +105,95 @@
       <article class="card card--background2" id="whatToDo">
         <h1 class="card__title"> <span class="card__title--overline">W</span>hat to do? </h1>
 
-        <section class="tabs">
+        <div class="tabs">
 
           <ul role="tablist" id="js-tabs" class="tabs__list">
+
             <li role="presentation" class="tabs__list-item">
               <a href="#section1" role="tab" id="tab1" aria-selected="true"
-                class="tabs__tab tabs__tab--first">Controls</a>
+                class="tabs__tab tabs__tab--first">Cities</a>
             </li>
+
             <li role="presentation" class="tabs__list-item">
               <a href="#section2" role="tab" id="tab2" tabindex="-1" class="tabs__tab">Beaches</a>
             </li>
+
             <li role="presentation" class="tabs__list-item">
-              <a href="#section3" role="tab" id="tab3" tabindex="-1" class="tabs__tab tabs__tab--last">Natural Parks</a>
+              <a href="#section3" role="tab" id="tab3" tabindex="-1" class="tabs__tab">Nature zones</a>
             </li>
+
+            <li role="presentation" class="tabs__list-item">
+              <a href="#section3" role="tab" id="tab3" tabindex="-1" class="tabs__tab tabs__tab--last">Other
+                activities</a>
+            </li>
+
           </ul>
-          <section id="tabSection1" role="tabpanel" aria-labelledby="tab1" class="tabs__tabcontent">
-            <h2>Controls</h2>
-            <p>
-              If focus is on a <a href="#">tab button</a>
-            </p>
-            <ul>
-              <li><strong>Left / Up Arrow:</strong> Show the previous tab</li>
-              <li><strong>Right / Down Arrow:</strong> Show the next tab</li>
-              <li><strong>Home:</strong> Show the first tab</li>
-              <li><strong>End:</strong> Show the last tab</li>
-            </ul>
-          </section>
-          <section id="tabSection2" role="tabpanel" aria-labelledby="tab2" hidden class="tabs__tabcontent">
-            <h2>More Controls</h2>
-            <p>
-              If focus is on an element in a tab panel:
-            </p>
-            <ul>
-              <li><strong>Control + Up Arrow/Left Arrow:</strong> Set focus on the tab button for the currently
-                displayed tab.</li>
-              <li><strong>Control + Page Up:</strong> Show the previous tab and set focus on its corresponding tab
-                button. Shows the last tab in the panel if current tab is the first one.</li>
-              <li><strong>Control + Page Down:</strong> Show the next tab and set focus on its corresponding tab button.
-                Shows the first tab in the panel if current tab is the last one.</li>
-            </ul>
-          </section>
-          <section id="tabSection3" role="tabpanel" aria-labelledby="tab3" hidden class="tabs__tabcontent">
-            <h2>Checklist</h2>
-            <p id="linkOnTab3">
-              <a href="#linkOnTab3">Random link on the last tab</a>
-            </p>
-            <ol>
-              <li>The element that serves as the container for the set of tabs has role <strong>tablist</strong>.</li>
-              <li>Each element that serves as a tab has role <strong>tab</strong>. and is contained within the element
-                with role <strong>tablist</strong>..</li>
-              <li>Each element that contains the content panel for a tab has role <strong>tabpanel</strong>..</li>
-              <li>If the tab list has a visible label, the element with role tablist has
-                <strong>aria-labelledby</strong>. set to a value that refers to the labelling element. Otherwise, the
-                tablist element has a label provided by <strong>aria-label</strong>.
-              </li>
-              <li>Each element with role tab has the property <strong>aria-controls</strong>. referring to its
-                associated tabpanel element.</li>
-              <li>The active tab element has the state <strong>aria-selected</strong>. set to true and all other tab
-                elements have it set to false.</li>
-              <li>Each element with role tabpanel has the property <strong>aria-labelledby</strong>. referring to its
-                associated tab element.</li>
-            </ol>
+
+          <section id="tabSection1" role="tabpanel" aria-labelledby="tab1" class="tab-content">
+
+            <h2 class="tab-content__title"> Cities </h2>
+
+            <div class="tab-content__container">
+              <img class="tab-content__photo" src="assets/images/costa-rica5.jpeg"
+                alt="Basilica de los Angeles, Cartago" />
+              <ul class="tab-content__list tab-content__list--icon1">
+                <li> Visit museums. </li>
+                <li> Eat at local restaurants. </li>
+                <li> Tour by famous locations. </li>
+                <li> Take a walk through parks, churches and other wonderful buildings. </li>
+              </ul>
+            </div>
+
           </section>
 
-        </section>
+          <section id="tabSection2" role="tabpanel" aria-labelledby="tab2" hidden class="tab-content">
+            <div class="tab-content__container">
+
+              <h2>More Controls</h2>
+              <p>
+                If focus is on an element in a tab panel:
+              </p>
+              <ul>
+                <li><strong>Control + Up Arrow/Left Arrow:</strong> Set focus on the tab button for the currently
+                  displayed tab.</li>
+                <li><strong>Control + Page Up:</strong> Show the previous tab and set focus on its corresponding tab
+                  button. Shows the last tab in the panel if current tab is the first one.</li>
+                <li><strong>Control + Page Down:</strong> Show the next tab and set focus on its corresponding tab
+                  button.
+                  Shows the first tab in the panel if current tab is the last one.</li>
+              </ul>
+
+            </div>
+          </section>
+
+          <section id="tabSection3" role="tabpanel" aria-labelledby="tab3" hidden class="tab-content">
+            <div class="tab-content__container">
+
+              <h2>Checklist</h2>
+              <p id="linkOnTab3">
+                <a href="#linkOnTab3">Random link on the last tab</a>
+              </p>
+              <ol>
+                <li>The element that serves as the container for the set of tabs has role <strong>tablist</strong>.</li>
+                <li>Each element that serves as a tab has role <strong>tab</strong>. and is contained within the element
+                  with role <strong>tablist</strong>..</li>
+                <li>Each element that contains the content panel for a tab has role <strong>tabpanel</strong>..</li>
+                <li>If the tab list has a visible label, the element with role tablist has
+                  <strong>aria-labelledby</strong>. set to a value that refers to the labelling element. Otherwise, the
+                  tablist element has a label provided by <strong>aria-label</strong>.
+                </li>
+                <li>Each element with role tab has the property <strong>aria-controls</strong>. referring to its
+                  associated tabpanel element.</li>
+                <li>The active tab element has the state <strong>aria-selected</strong>. set to true and all other tab
+                  elements have it set to false.</li>
+                <li>Each element with role tabpanel has the property <strong>aria-labelledby</strong>. referring to its
+                  associated tab element.</li>
+              </ol>
+
+            </div>
+          </section>
+
+        </div>
 
         </div>
       </article>
